@@ -1,0 +1,75 @@
+📚 SQL Commands – What Each One Does
+🔹 CREATE DATABASE
+CREATE DATABASE BlogDB;
+
+
+👉 Creates a new database named BlogDB.
+
+🔹 USE
+USE BlogDB;
+
+
+👉 Selects the database to work on.
+
+🔹 CREATE TABLE
+CREATE TABLE Utilisateur ( ... );
+
+
+👉 Creates a new table with defined columns and constraints.
+
+🔹 INT
+
+👉 Defines a column that stores integer numbers.
+
+🔹 VARCHAR(n)
+
+👉 Stores short text strings with a maximum length of n characters.
+
+🔹 TEXT
+
+👉 Stores long text (article content, comments).
+
+🔹 DATE
+
+👉 Stores a date (YYYY-MM-DD).
+
+🔹 AUTO_INCREMENT
+
+👉 Automatically increments the ID for each new row.
+
+🔹 PRIMARY KEY
+
+👉 Uniquely identifies each record in a table.
+👉 Cannot be NULL or duplicated.
+
+🔹 NOT NULL
+
+👉 Ensures that the column must have a value.
+
+🔹 UNIQUE
+
+👉 Ensures that all values are different (example: email).
+
+🔹 FOREIGN KEY
+FOREIGN KEY (id_utilisateur) REFERENCES Utilisateur(id)
+
+
+👉 Creates a relationship between two tables.
+👉 Links Article to Utilisateur.
+
+🔹 REFERENCES
+
+👉 Specifies which table and column the foreign key refers to.
+
+🔹 SHOW TABLES
+SHOW TABLES;
+
+
+👉 Displays all tables in the selected database.
+
+🔹 INSERT INTO
+INSERT INTO Utilisateur (nom, email, mot_de_passe)
+VALUES ('Alice', 'alice@test.com', '1234');
+
+
+👉 Inserts a new record into a table.
