@@ -1,0 +1,44 @@
+Chapitre 6 – Bonnes pratiques de structuration
+
+🎯 Objectif :
+Concevoir et maintenir une base de données relationnelle efficace, cohérente et performante.
+
+📚 Concepts clés :
+
+Noms clairs pour bases, tables et colonnes (minuscules, pas d’espaces ni accents).
+
+Respecter la normalisation :
+
+1FN : une cellule = une seule valeur
+
+2FN : chaque colonne dépend de la clé primaire
+
+3FN : pas de dépendances transitives
+
+Choisir des types de données appropriés.
+
+Gérer correctement clés primaires et étrangères.
+
+Ajouter des index pour accélérer les requêtes.
+
+Documenter avec commentaires dans les scripts SQL.
+
+🛠 Bonnes pratiques concrètes :
+
+Vérifier la cohérence des noms (ex. utilisateur, article, commentaire; colonnes : id, nom, email, date_pub).
+
+Ajouter des index sur colonnes recherchées :
+
+ALTER TABLE Utilisateur ADD INDEX (email);
+
+
+Ajouter des commentaires pour documenter :
+
+ALTER TABLE Utilisateur COMMENT = 'Table des utilisateurs du blog';
+
+
+Vérifier la normalisation : pas de colonnes avec plusieurs valeurs ou dépendances non directes.
+
+Sauvegarder la structure finale (export via phpMyAdmin ou mysqldump).
+
+💡 Astuce : Une bonne structuration facilite la maintenance et améliore les performances à long terme.
